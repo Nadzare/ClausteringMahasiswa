@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Clustering</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container-unggah">
+        <h1>Hasil Clustering Mahasiswa</h1>
+        <div class="plot">
+            <img src="data:image/png;base64,{{ plot_url }}" alt="Plot Klaster">
+        </div>
+        <div class="table">
+            <h2>Data dengan Kategori</h2>
+            {{ tables|safe }}
+        </div>
+        <a href="/">Kembali</a>
+    </div>
+</body>
+</html>

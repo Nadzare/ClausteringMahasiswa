@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clustering Mahasiswa</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NadzareKA||Airque</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">MENASPRO</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#beranda" class="active">Beranda</a>
+            <a href="#kelompok">Kelompok</a>
+            <a href="#kasus">Kasus</a>
+            <a href="#materi">Materi</a>
+            <a href="#proyek">Proyek</a>
+        </nav>
+    </header>
+
+    <section class="beranda" id="beranda">
+        <div class="beranda-content">
+            <h3>Pengenalan Pola</h3>
+            <h1>Implementasi <span>K-Means Claustering</span></h1>
+            <h3>Keaktifan Mahasiswa <span class="multiple-text"></span></h3>
+            <p>Pengelompokan Maahasiswa Berdasarkan Partisipasi di Kegiatan Sosial dan Organisasi Dengan K-Means Clustering Untuk Peningkatan Program Pengembangan Soft Skills dan KepeMimpinAN</p>
+
+            <a href="../static/pola.pdf" download="peta.txt" class="btn">Proposal</a>
+        </div>
+
+        <div class="beranda-img">
+            <img src="../static/main.png" alt="">
+        </div>
+    </section>
+
+
+    <section class="kelompok" id="kelompok">
+        <div class="kelompok-img">
+            <img src="../static/kel.png" alt="">
+        </div>
+
+        <div class="kelompok-content">
+           <h2 class="heading">Nama Anggota <span>Kelompok :</span></h2> 
+           <h3>Pengenalan Pola</h3>
+           <p>1. Nadzare Kafah Alfatiha (H1D023014)</p>
+           <p>2. Haniel Wijanarko (H1D023052)</p>
+           <p>3. Ananda Arsya Sabili (H1D023053)</p>
+
+           <h3>Claustering Keaktifan Mahasiswa</h3>
+        </div>
+    </section>
+
+
+    <section class="kasus" id="kasus">
+        <h2 class="heading">Deskripsi <span>Kasus</span></h2>
+
+        <div class="kasus-container">
+
+            <img src="images/kasus.jpg" alt="">
+
+            
+            <div class="kasus-box">
+                <i class='bx bxs-map-alt' ></i>              
+                 <h3>Studi Kasus</h3>
+                <p>Di dalam kehidupan mahasiswa, partisipasi dalam kegiatan sosial dan organisasi sangat penting untuk mengembangkan soft skills dan hard skills. Universitas ingin memahami tingkat keterlibatan mahasiswa dalam kegiatan-kegiatan tersebut untuk merancang program yang disesuaikan dengan kebutuhan masing-masing kelompok.</p>
+            </div>
+            
+            <div class="kasus-box">
+                <i class='bx bxs-cloud-rain'></i>              
+                <h3>Tujuan</h3>
+                <p>Mengelompokkan mahasiswa ke dalam tiga kategori—"Aktif," "Sedang," dan "Pasif"—berdasarkan tingkat keikutsertaan mereka dalam kegiatan sosial, organisasi kemahasiswaan, dan kepanitiaan. Dengan mengetahui kategori ini, universitas dapat merancang program pengembangan yang tepat sasaran untuk mendukung mahasiswa di setiap kelompok.</p>
+            </div>
+
+            <div class="kasus-box"> 
+                <i class='bx bx-bar-chart-alt'></i>             
+                <h3>Data</h3>
+                <p>Pada Proyek pengelompokan mahasiswa mengguanakan K-mean claustering ini memrlukan data dari mahasiswanya sedniri, dan data yang di ambil untuk mengkelompokanya adalah partisipasi sosial dan partisipasi organisasi, dengan ini dapat mengetahui apakah mahasiswa itu tergolong sebagai kategori —"Aktif," "Sedang," dan "Pasif"</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="materi" id="materi">
+        <h2 class="heading">Materi <span>Implementasi</span></h2>
+
+        <div class="materi-container">
+            <img src="images/KU.webp" alt=""> <br>
+            <p><b>Implementasi K-Means Clustering</b> Data Preprocessing: Mengubah data yang terkumpul ke dalam bentuk numerik, seperti skala untuk posisi yang dipegang (misalnya, anggota diberi nilai 1, koordinator nilai 2, dan ketuanilai 3).
+                Normalisasi Data: Untukmenghindari bias darifiturdengan skala besar, data dinormalisasi agar setiap variabel memiliki skala yang seimbang.
+            </p>
+            <p><b>Penerapan K-Means Clustering</b> K-Means Clustering akan dijalankan dengan k = 3 untukmengelompokkan mahasiswa ke dalam tiga kategori:
+                Aktif: Mahasiswa yang memiliki partisipasi tinggi di organisasi, sering mengikuti kegiatan sosial, dan biasanya memegang tanggung jawab lebih tinggi.
+                Sedang: Mahasiswa dengan keterlibatan cukup aktif, tetapi tidak terlalu sering atau tidak selalu memegang peran penting.
+                Pasif: Mahasiswa yang jarang terlibat organisasi dan kegiatan sosial. Umumnya tidak memegang tanggung jawab apapun.
+            </p>
+            <p><b>Interpretasi dan Implementasi Hasil</b> Ketiga kategori mahasiswa akan memiliki program yang berbeda, seperti:
+                Kategori Aktif: Mahasiswa dalam kelompok ini dapat diarahkan ke program pelatihan pengembangan diri untuk memperkuat keahlian mereka.
+                Kategori Sedang: Mahasiswa dengan partisipasi menengah dapat diberikan program pengembangan soft skill dasar, seperti komunikasi dan kerjasama sehingga termotivasi untuk lebih aktif lagi.
+                Kategori Pasif: Kelompok ini dapat diikutkan dalam program motivasi atau pengenalan organisasi untuk mendorong partisipasi mereka secara bertahap.                
+            </p>
+            <p><b>Manfaat Pengelompokan Mahasiswa</b> Pengelompokkan ini membantu universitas dalam:
+                Menargetkan program pengembangan yang sesuai untuk setiap kategori mahasiswa.
+                Menyusun strategi peningkatan partisipasi mahasiswa di lingkungan kampus.
+                Mengembangkan soft skills dan hard skills mahasiswa.
+                Mempersiapkan mahasiswa yang tangguh dan siap untuk menghadapi dunia kerja.                 
+            </p>
+
+            <p><b>Pengimplementasian</b> Python adalah pilihan ideal untuk proyek ini karena proyek pustakanya yang luas. Langkah-langkahnya meliputi preprocessing data dengan pandas dan NumPy, 
+                normalisasi menggunakan scikit-learn, serta penerapan algoritma K-Means di scikit-learn. Hasil clustering dianalisis secara visual menggunakan matplotlib dan seaborn. Untuk penyimpanan data,
+                MySQL atau SQLite dapat dikelola dengan SQLAlchemy. Jika diperlukan skalabilitas, platform seperti Google Colab atau AWS SageMaker bisa digunakan. Hasil akhir dapat disajikan
+                melalui dashboard interaktif dengan Dash atau Streamlit untuk mempermudah eksplorasi wawasan.                 
+            </p>
+        </div>
+    </section>
+
+
+    <section class="proyek" id="proyek">
+        <h2 class="heading">Proyek <span>Implementasi</span></h2>
+        <h1>Clustering Mahasiswa</h1>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <div class="form-container">
+                <label for="file" class="file-label">Unggah File CSV:</label>
+                <input type="file" name="file" id="file" required class="file-input">
+                <button type="submit" class="btn">Proses</button>
+            </div>
+        </form>
+    </section>
+    
+    
+    
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 Made with &hearts; Kelompok 7 || All Right Reserved</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#beranda"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../static/script.js"></script>
+</body>
+</html>
