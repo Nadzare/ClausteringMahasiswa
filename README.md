@@ -1,94 +1,66 @@
 PENGELOMPOKAN MAHASISWA BERDASARKAN PARTISIPASI DI KEGIATAN SOSIAL DAN ORGANISASI DENGAN K-MEANS CLUSTERING UNTUK PENINGKATAN PROGRAM PENGEMBANGAN SOFT SKILLS DAN KEPEMIMPINAN.
 
-Proyek ini menggunakan algoritma K-Means Clustering untuk mengelompokkan mahasiswa berdasarkan dua fitur utama: Partisipasi Sosial dan Partisipasi Organisasi. Program ini memungkinkan pengguna untuk menginput data mahasiswa secara manual atau melalui file CSV, melakukan preprocessing, dan akhirnya mengelompokkan mahasiswa dalam kategori berdasarkan skor partisipasi mereka. Visualisasi dan analisis klaster juga disediakan untuk membantu memahami hasilnya.
+Proyek ini adalah aplikasi berbasis web yang bertujuan untuk mengelompokkan mahasiswa berdasarkan tingkat partisipasi sosial dan organisasinya menggunakan algoritma K-Means Clustering. Aplikasi ini memungkinkan pengguna untuk mengunggah file CSV berisi data mahasiswa, kemudian memproses data tersebut untuk menghasilkan klaster yang menggambarkan kategori partisipasi masing-masing mahasiswa. Selain itu, hasil pengelompokan divisualisasikan secara interaktif menggunakan teknik Principal Component Analysis (PCA).
 
-Teknologi yang Digunakan
+-> Fitur Utama
+1. Unggah File CSV
+Pengguna dapat mengunggah file CSV yang mengandung data partisipasi mahasiswa. File tersebut harus memiliki dua kolom utama:
+Partisipasi_Sosial
+Partisipasi_Organisasi
+
+2. Pra-pemrosesan Data
+Data pada kolom Partisipasi_Sosial dan Partisipasi_Organisasi distandarisasi menggunakan StandardScaler agar memiliki distribusi yang seragam.
+
+3. Pengelompokan (Clustering)
+Data diproses menggunakan algoritma K-Means Clustering dengan jumlah klaster optimal yang disetel ke 3. Setiap klaster diberi kategori berikut:
+Pasif
+Sedang
+Aktif
+
+4. Visualisasi Data
+Data hasil klaster direduksi dimensinya menjadi dua menggunakan PCA. Hasil pengelompokan divisualisasikan dalam bentuk scatter plot, dengan warna berbeda untuk setiap kategori.
+
+5. Tampilan Hasil
+Tabel data yang telah dikelompokkan ditampilkan di halaman hasil.
+Scatter plot visualisasi klaster ditampilkan langsung di halaman web.
+
+Cara Kerja
+1. Unggah Data
+Pengguna mengunggah file CSV melalui antarmuka web.
+
+2. Proses Data
+Data divalidasi untuk memastikan kolom yang dibutuhkan ada.
+Algoritma K-Means digunakan untuk melakukan pengelompokan.
+
+3. Tampilkan Hasil
+Hasil klasterisasi ditampilkan dalam tabel.
+Scatter plot hasil pengelompokan divisualisasikan untuk mempermudah analisis.
+
+
+-> Teknologi yang Digunakan
 Python: Bahasa pemrograman utama.
-Pandas: Untuk manipulasi data.
-NumPy: Untuk komputasi numerik.
-Matplotlib & Seaborn: Untuk visualisasi data.
-Scikit-learn: Untuk algoritma K-Means dan StandardScaler.
-Fitur
-Input Data:
+Flask: Framework untuk pengembangan aplikasi web.
+Pandas dan NumPy: Untuk manipulasi dan analisis data.
+Scikit-learn: Untuk algoritma K-Means dan PCA.
+Matplotlib dan Seaborn: Untuk visualisasi data.
+HTML & CSS: Untuk antarmuka pengguna.
 
-Input data dapat dilakukan melalui file CSV atau input manual.
-Format CSV yang diperlukan harus memiliki kolom: Mahasiswa, Partisipasi_Sosial, Partisipasi_Organisasi.
-Preprocessing Data:
 
-Data partisipasi sosial dan organisasi akan distandarisasi agar sesuai untuk algoritma K-Means.
-Metode Elbow:
+-> Cara Menjalankan Aplikasi
+Pastikan Anda telah menginstal Python 3 dan pustaka berikut:
+pip install flask pandas numpy scikit-learn matplotlib seaborn
 
-Menentukan jumlah klaster yang optimal menggunakan Metode Elbow untuk membantu memilih jumlah klaster yang tepat.
-K-Means Clustering:
+Jalankan aplikasi dengan perintah:
+python app.py
 
-Mahasiswa akan dikelompokkan ke dalam klaster berdasarkan partisipasi sosial dan organisasi.
-Kategorisasi Klaster:
+-> Struktur File
+app.py: File utama aplikasi.
+templates/index.html: Halaman awal untuk mengunggah file.
+templates/hasil.html: Halaman hasil yang menampilkan tabel dan plot.
 
-Setiap klaster akan diberikan kategori: Pasif, Sedang, dan Aktif.
-Visualisasi:
-
-Hasil klaster akan divisualisasikan dalam plot 2D menggunakan PCA (Principal Component Analysis).
-Bar chart untuk menunjukkan rata-rata tingkat partisipasi per kategori.
-Simpan Hasil:
-
-Hasil pengelompokan mahasiswa beserta kategori disimpan dalam file CSV.
-Cara Penggunaan
-Persiapkan Data: Anda dapat memilih untuk mengimpor data melalui dua cara:
-
-File CSV: Pastikan file CSV memiliki kolom Mahasiswa, Partisipasi_Sosial, dan Partisipasi_Organisasi.
-Input Manual: Anda dapat memasukkan data mahasiswa secara langsung.
-Jalankan Program: Setelah mempersiapkan data, jalankan program dengan memilih salah satu opsi input. Program ini akan melakukan pengelompokan data dan menampilkan hasil klaster.
-
-Hasil: Hasil pengelompokan akan disimpan dalam file hasil_pengelompokan_mahasiswa.csv.
-
-Instalasi
-Untuk menjalankan proyek ini, pastikan Anda memiliki Python versi 3.x terinstal, serta pustaka yang diperlukan. Anda dapat menginstalnya dengan mengikuti langkah-langkah di bawah ini:
-
-Clone Repository (Jika Ada):
-
-bash
-Copy code
-git clone <url-repository>
-cd <folder-proyek>
-Buat Virtual Environment:
-
-bash
-Copy code
-python -m venv env
-Aktifkan Virtual Environment:
-
-Di Windows:
-bash
-Copy code
-.\env\Scripts\activate
-Di macOS/Linux:
-bash
-Copy code
-source env/bin/activate
-Install Dependensi: Anda dapat menginstal dependensi yang diperlukan dengan menjalankan:
-
-bash
-Copy code
-pip install -r requirements.txt
-Struktur Proyek
-bash
-Copy code
-.
-├── main.py              # Program utama
-├── data.csv             # Dataset input (contoh file)
-├── hasil_pengelompokan_mahasiswa.csv  # Hasil pengelompokan
-├── .gitignore           # File Git ignore
-├── README.md            # Dokumentasi proyek
-env                       # Virtual environment
-Kontribusi
-Jika Anda ingin berkontribusi pada proyek ini, silakan buat fork repository ini dan ajukan pull request. Pastikan untuk mengikuti pedoman pengkodean yang baik dan menyertakan penjelasan untuk setiap perubahan yang dilakukan.
-
-Lisensi
-Proyek ini dilisensikan di bawah kelompok pengenalan pola.
-
-Penjelasan:
-Bagian Pengenalan memberikan gambaran umum tentang proyek dan tujuannya.
-Fitur menjelaskan berbagai fitur yang ada dalam program, seperti input data, proses pengelompokan, dan visualisasi.
-Instruksi Penggunaan memberikan petunjuk langkah demi langkah agar pengguna dapat menjalankan program.
-Instalasi berisi cara mengatur lingkungan dan menginstal dependensi yang diperlukan.
-Struktur Proyek memberikan gambaran tentang struktur file dan folder dalam proyek.
+-> Lisensi
+Kelompok 7 Pengenalan Pola
+Nama Anggota Kelompok :
+1. Nadzare Kafah Alfatiha (H1D023014)
+2. Haniel Wijanarko (H1D023052)
+3. Ananda Arsya Sabili (H1D023053)
